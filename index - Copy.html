@@ -39,7 +39,7 @@
     }
 </script> 	
 </head> 
-<body onload="onLoad()"> 		
+<body> 		
 <div id="container">
 
 
@@ -213,6 +213,7 @@ function error(msg) {
 }
 
 if (navigator.geolocation) {
+	alert("hola menu");
   navigator.geolocation.getCurrentPosition(success, error);
 } else {
   error('Su navegador no tiene soporte para su geolocalización');
