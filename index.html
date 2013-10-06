@@ -40,6 +40,27 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
 <script type="text/javascript" src="/scripts/downloadxml.js"></script>
 <script type="text/javascript"> 
+
+// Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("menubutton", onMenuKeyDown, false);
+    }
+
+    // Handle the menu button
+    //
+    function onMenuKeyDown() {
+		alert('hola menu');
+    }
+
+
 //<![CDATA[
       // this variable will collect the html which will eventually be placed in the side_bar 
       var side_bar_html = ""; 
