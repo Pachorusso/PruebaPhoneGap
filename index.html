@@ -21,7 +21,7 @@ var watchID;
 $(document).ready(function(){
     document.addEventListener("deviceready", onDeviceReady, false);
     //for testing in Chrome browser uncomment
-    //onDeviceReady();
+    onDeviceReady();
 });
  
 //PhoneGap is ready function
@@ -63,9 +63,9 @@ function map(){
      
     google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
         //get geoposition once
-        //navigator.geolocation.getCurrentPosition(geo_success, geo_error, { maximumAge: 5000, timeout: 5000, enableHighAccuracy: true });
+        navigator.geolocation.getCurrentPosition(geo_success, geo_error, { maximumAge: 5000, timeout: 5000, enableHighAccuracy: true });
         //watch for geoposition change
-        watchID = navigator.geolocation.watchPosition(geo_success, geo_error, { maximumAge: 5000, timeout: 5000, enableHighAccuracy: true });   
+        //watchID = navigator.geolocation.watchPosition(geo_success, geo_error, { maximumAge: 5000, timeout: 5000, enableHighAccuracy: true });   
     }); 
 }
  
