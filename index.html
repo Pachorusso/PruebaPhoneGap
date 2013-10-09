@@ -33,6 +33,7 @@ function onDeviceReady() {
     google.load("maps", "3.8", {"callback": map, other_params: "sensor=true&language=en"});
     max_height();
 	document.addEventListener("menubutton", onMenuKeyDown, false);
+	onDeviceReady();
 }
  
 function onMenuKeyDown() {
