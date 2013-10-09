@@ -30,9 +30,14 @@ function onDeviceReady() {
     $(window).bind('pageshow resize orientationchange', function(e){
         max_height();
     });
-    max_height();
     google.load("maps", "3.8", {"callback": map, other_params: "sensor=true&language=en"});
+    max_height();
+	document.addEventListener("menubutton", onMenuKeyDown, false);
 }
+ 
+function onMenuKeyDown() {
+	alert('menu key down');
+} 
  
 function max_height(){
     var h = $('div[data-role="header"]').outerHeight(true);
